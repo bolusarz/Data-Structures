@@ -24,7 +24,7 @@ class LinkedListAccessTestCase(unittest.TestCase):
 
     def test_get_item_linked_list(self):
         my_list = LinkedList(5)
-        self.assertEqual(my_list[0], 5)
+        self.assertEqual(my_list.get(0), 5)
 
     def test_get_item_at_negative_index(self):
         my_list = LinkedList(5)
@@ -63,7 +63,7 @@ class LinkedListInsertionTestCase(unittest.TestCase):
         my_list.append(3)
         my_list.append(30)
         my_list.append(2)
-        my_list[2] = 25
+        my_list.insert(2, 25)
         self.assertEqual(my_list.get(2), 25)
 
     def test_insert_at_head(self):
