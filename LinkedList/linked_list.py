@@ -41,7 +41,7 @@ class LinkedList:
                 node.next = self.head.next
                 self.head = node
             else:
-                for i in range(0, position-1):
+                for i in range(0, position - 1):
                     current = current.next
                 node.next = current.next
                 current.next = node
@@ -58,11 +58,16 @@ class LinkedList:
             self.head = None
             self.size = 0
         else:
-            for _ in range(0, position-1):
+            for _ in range(0, position - 1):
                 current = current.next
             current.next = current.next.next
             self.size -= 1
 
+    def __getitem__(self, item):
+        return self.get(item)
+
+    def __setitem__(self, key, value):
+        self.insert(key, value)
 
     @staticmethod
     def __create_node__(data):
@@ -72,4 +77,3 @@ class LinkedList:
         if index < 0:
             return abs(self.size + index)
         return index
-
