@@ -18,3 +18,5 @@ if __name__ == '__main__':
 
     my_list.delete(-1)
     print(my_list)
+    my_list.delete(0)
+    print(my_list)
